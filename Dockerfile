@@ -1,8 +1,8 @@
 FROM ubuntu:bionic
 MAINTAINER Cantemo <info@cantemo.com>
 ENV INSTALL_DIR=/opt/cantemo/iconik_storage_gateway \
-    DEBEMAIL=info@cantemo.com \
-    DEBFULLNAME=Cantemo
+    DEBEMAIL=info@iconik.io \
+    DEBFULLNAME="iconik Media AB"
 RUN bash -c 'printf """ \
 \nDEBEMAIL="$DEBEMAIL" \
 \nDEBFULLNAME="$DEBFULLNAME" \
@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y wget gnupg && \
     echo "deb [trusted=yes] https://packages.iconik.io/deb/ubuntu ./bionic main" > /etc/apt/sources.list.d/iconik.list && \
     apt-get update && \
     apt-get install -y iconik-storage-gateway
+VOLUME /var/cantemo/iconik_storage_gateway/data
 CMD $INSTALL_DIR/iconik_storage_gateway \
     --iconik-url=${ICONIK_URL:-https://app-lb.iconik.io/} \
     --auth-token=${AUTH_TOKEN} \
