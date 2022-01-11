@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-MAINTAINER Cantemo <info@cantemo.com>
+MAINTAINER iconik Media AB <info@iconik.io>
 ENV INSTALL_DIR=/opt/cantemo/iconik_storage_gateway \
     DEBEMAIL=info@iconik.io \
     DEBFULLNAME="iconik Media AB"
