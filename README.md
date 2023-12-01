@@ -10,7 +10,7 @@ $ docker run -it \
     --env APP_ID="my_app_id" \
     --env STORAGE_ID="my_storage_id" \
     -v /mnt/my_nas:/mnt/mynas \
-    -v /home/my_user/isg_local_data:/var/cantemo/iconik_storage_gateway/data \
+    -v /home/my_user/isg_local_data:/var/iconik/iconik_storage_gateway/data \
     docker_isg:latest
 ```
 
@@ -18,7 +18,7 @@ you could also use external `config.ini` instead:
 ```
 docker run -it \
     -v /mnt/my_nas:/mnt/mynas \
-    -v /home/my_user/isg_local_data:/var/cantemo/iconik_storage_gateway/data \
+    -v /home/my_user/isg_local_data:/var/iconik/iconik_storage_gateway/data \
     -v /home/my_user/isg_custom_config:/my_isg_config \
     docker_isg:latest iconik_storage_gateway --config=/my_isg_config/config.ini
 ```
