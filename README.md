@@ -26,3 +26,18 @@ docker run -it \
 `/home/my_user/isg_local_data` - custom preferred location on host
 for the ISG local database. It is important to mount it as an external
 volume in order to make local database persistent.
+
+
+# Development
+
+To build a docker image against the latest development build of the
+ISG, you can use the following command to install the package from the
+development build repository.
+
+`docker build --build-arg REPO_BASE=https://packages.iconik.io/dev/deb/ubuntu  -t docker_isg:latest .`
+
+[!CAUTION]
+
+Development builds of the ISG are not to be considered stable and
+should not be used in production. iconik does not provide support for
+issues arising from running development builds.
