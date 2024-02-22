@@ -36,8 +36,8 @@ development build repository.
 
 `docker build --build-arg REPO_BASE=https://packages.iconik.io/dev/deb/ubuntu  -t docker_isg:latest .`
 
-[!CAUTION]
-
-Development builds of the ISG are not to be considered stable and
-should not be used in production. iconik does not provide support for
-issues arising from running development builds.
+> [!CAUTION]
+>
+> Development builds of the ISG are not to be considered stable and
+> should not be used in production. iconik does not provide support for
+> issues arising from running development builds.
