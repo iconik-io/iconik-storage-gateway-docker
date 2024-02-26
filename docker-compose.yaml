@@ -12,12 +12,16 @@ services:
     build:
       context: .
       # Uncomment the following lines to build an image with a development ISG
-      # args:
-      #   REPO_BASE: https://packages.iconik.io/dev/deb/ubuntu
+      #args:
+      #  REPO_BASE: https://packages.iconik.io/dev/deb/ubuntu
     volumes:
       # This is the ISG data directory where the local database is kept.
       - ./isg_local_data:/var/iconik/iconik_storage_gateway/data
 
       # Uncomment the following line to map a media volume into the ISG container
-      # - /Volumes/example:/Volumes/example
-    
+      #- /Volumes/example:/Volumes/example
+
+      #
+      # Uncomment the following volume and the command below to use a custom config file
+      #- ./my_isg_config:/my_isg_config
+    #command: iconik_storage_gateway --config=/my_isg_config/config.ini
