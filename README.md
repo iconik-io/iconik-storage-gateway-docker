@@ -28,6 +28,27 @@ for the ISG local database. It is important to mount it as an external
 volume in order to make local database persistent.
 
 
+# docker-compose
+
+You can also use docker compose to manage the ISG.
+We have provided an example docker-compose.yaml file which can be used as a base for your configuration.
+You will need to configure a storage volume in the docker-compose.yaml file to map your storage into the container,
+and also add your app-id, auth-token and storage-id to the file .env
+
+After configuring this you can bring up the ISG with the command
+
+```
+docker compose up -d
+```
+
+This will start the ISG process in a detached container.
+
+You can view the logs with the command
+
+```
+docker compose logs -f isg
+```
+
 # Development
 
 To build a docker image against the latest development build of the
